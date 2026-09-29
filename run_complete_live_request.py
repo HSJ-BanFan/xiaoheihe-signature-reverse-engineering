@@ -36,8 +36,8 @@ try:
     params = {
         "offset": "0",
         "limit": "10",
-        "heybox_id": "76644009",
-        "imei": "eaf3888f7f25adcb",
+        "heybox_id": "YOUR_HEYBOX_ID",
+        "imei": "YOUR_IMEI",
         "device_info": "25102RKBEC",
         "os_type": "Android",
         "x_os_type": "Android",
@@ -71,7 +71,7 @@ try:
         headers={
             "User-Agent": "Mozilla/5.0 (Linux; Android 14; 25102RKBEC Build/UP1A.231005.007; wv) AppleWebKit/537.36",
             "Accept": "application/json",
-            "Cookie": "pkey=MTc5MDU4MTgyNy42N183NjY0NDAwOWN6bGdidnByaXJ3aGhnYnk__; heybox_id=76644009",
+            "Cookie": "pkey=YOUR_TEST_PKEY; heybox_id=76644009",
             "Referer": "https://api.xiaoheihe.cn",
             "Connection": "close"
         }
@@ -97,3 +97,4 @@ finally:
     proc.terminate()
     proc.wait()
     print("\n[*] 5. Signature microservice stopped cleanly.")
+

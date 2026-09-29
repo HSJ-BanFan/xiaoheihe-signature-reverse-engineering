@@ -66,12 +66,12 @@ test_suite = [
     {
         "name": "用户动态列表 (profile/user/link/list)",
         "path": "/bbs/app/profile/user/link/list",
-        "params": {"userid": "76644009", "offset": "0", "limit": "5"}
+        "params": {"userid": "YOUR_HEYBOX_ID", "offset": "0", "limit": "5"}
     },
     {
         "name": "用户粉丝列表 (profile/follower/list)",
         "path": "/bbs/app/profile/follower/list",
-        "params": {"userid": "76644009", "offset": "0", "limit": "5"}
+        "params": {"userid": "YOUR_HEYBOX_ID", "offset": "0", "limit": "5"}
     }
 ]
 
@@ -92,8 +92,8 @@ try:
         # 2. Assemble parameters
         params = dict(target["params"])
         params.update({
-            "heybox_id": "76644009",
-            "imei": "eaf3888f7f25adcb",
+            "heybox_id": "YOUR_HEYBOX_ID",
+            "imei": "YOUR_IMEI",
             "device_info": "25102RKBEC",
             "os_type": "Android",
             "x_os_type": "Android",
@@ -118,7 +118,7 @@ try:
             headers={
                 "User-Agent": "Mozilla/5.0 (Linux; Android 14; 25102RKBEC Build/UP1A.231005.007; wv) AppleWebKit/537.36",
                 "Accept": "application/json",
-                "Cookie": "pkey=MTc5MDU4MTgyNy42N183NjY0NDAwOWN6bGdidnByaXJ3aGhnYnk__; heybox_id=76644009",
+                "Cookie": "pkey=YOUR_TEST_PKEY; heybox_id=76644009",
                 "Referer": "https://api.xiaoheihe.cn",
                 "Connection": "close"
             }
@@ -156,3 +156,4 @@ finally:
     proc.terminate()
     proc.wait()
     print("\n[*] 3. Signature microservice stopped cleanly.")
+
